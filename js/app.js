@@ -51,7 +51,7 @@ function createItem(data)
     .then(result => {
         console.log('Success:', result);
         
-        // Aquí podrías mostrar un mensaje de éxito al usuario, por ejemplo
+        alert('Pelicula Guardada Exitosamente');
         loadItems();  // Supongo que esta función carga los items actualizados
         form.reset();
     })
@@ -128,6 +128,7 @@ function loadItems() {
         })
     ;
     loadItems();
+    alert('Borrado Exitoso');
 }
 
 
@@ -153,8 +154,9 @@ function updateItem(data)
         .then(result => {
             console.log('Success:', result);   
            
-            loadItems();  // Supongo que esta función carga los items actualizados
+            loadItems();  
             form.reset();
+             alert('Editado correctamente');
         })
         .catch(error => 
             {
@@ -179,5 +181,7 @@ function updateItem(data)
   };
   
    window.deleteItem = deleteItem;
+
     loadItems();
+
 });
